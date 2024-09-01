@@ -1,0 +1,102 @@
+@import url('https://rsms.me/inter/inter.css');
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f0f0f0;
+  color: white;
+}
+
+h1 {
+  font-variant-numeric: tabular-nums;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter var', sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+}
+
+.app-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none; /* Ensures interaction passes through to the canvas */
+  z-index: 10;
+
+}
+
+.box {
+  width: 60rem; /* Set the desired width */
+  pointer-events: auto; /* Allows interaction */
+
+}
+
+.card {
+  height: 30rem;
+  margin: 1rem;
+
+}
+
+.box .card {
+  padding: 2.5rem;
+  padding-bottom: 3.5rem;
+}
+
+
+.scroll-area {
+  height: 85%;
+  overflow: hidden; /* Hide overflow by default */
+  padding: 0.5rem;
+}
+
+.scroll-area-viewport {
+  height: 100%; /* Ensure that viewport takes full height */
+  overflow: auto; /* Enable scrolling */
+  padding: 10px;
+}
+
+.scroll-area-scrollbar {
+  display: flex; /* Ensure the scrollbar is a flex container */
+  width: 6px; /* Width of the scrollbar track */
+  background-color: rgba(0, 0, 0, 0.1); /* Track background */
+}
+
+.scroll-area-thumb {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.5); /* Thumb background */
+  border-radius: 4px; /* Rounded thumb for aesthetics */
+}
+
+.icon-link {
+  transition: opacity 0.3s ease; /* Smooth transition for hover effects */
+  color: white;
+}
+
+.icon-link:hover {
+  opacity: 0.4; /* Reduce opacity for a subtle effect */
+}
